@@ -137,9 +137,9 @@ class Search extends React.Component {
                                     return (
                                         <div>
                                             <NavLink to={`/search/account/${el.animal_accounting_card}`}>
-                                                <Cart name={el.animal_name}
-                                                      img={URL + `media/photos/${el.animal_accounting_card}}.jpg`}
-                                                      description={`${el.sex==='f'?'Девочка':'Мальчиfdк'} / ${el.birth_date}`}/>
+                                                <Cart name={el.name}
+                                                      img={URL + `media/photos/${el.animal_accounting_card}.jpg`}
+                                                      description={`Пол: ${el.sex} / ${el.birth_date}`}/>
                                             </NavLink>
                                         </div>
                                     )

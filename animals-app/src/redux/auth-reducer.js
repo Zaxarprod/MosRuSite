@@ -4,17 +4,24 @@ export const LOGIN = 'AUTH/LOGIN'
 export const SET_ME = 'AUTH/SET-ME'
 export const LOGOUT = 'AUTH/LOGOUT'
 export const SET_ANSWERS = 'AUTH/SET_ANSWERS'
+export const SET_Q = 'AUTH/SET_Q'
 
 let initialState= {
     isAuth: false,
     user: null,
     token: localStorage.getItem('token'),
+    questions: [],
     answers: [],
     requests: [],
 }
 
 export const authReducer = (state = initialState, action) => {
     switch (action.type) {
+        case SET_Q:
+            return {
+                ...state,
+                questions: action.value,
+            }
         case SET_ANSWERS:
             return {
                 ...state,
@@ -45,6 +52,11 @@ export const authReducer = (state = initialState, action) => {
     }
 }
 
+const SetQuestionsAC = (value) => ({
+    type: SET_Q,
+    value,
+})
+
 const SetAnswersAC = (answers) => ({
     type: SET_ANSWERS,
     answers,
@@ -64,18 +76,30 @@ const SetMeAC = (user) => ({
     user,
 })
 
+export const SetQuestionsTC = () => {
+    return async (dispatch) => {
+        debugger
+        let data = await axios.get('http://165.22.192.77/s2b/api/v1/test/',{
+            headers:{
+                Authorization: `Token ${localStorage.getItem('token')}`,
+            },
+        }).then(res=>res.data.questions)
+        dispatch(SetQuestionsAC(data))
+        debugger
+    }
+}
+
 export const SetAnswersTC = (answers, id) => {
     return async (dispatch) => {
         let obj = {
             answers: answers,
         }
         let data = await axios.post(`http://165.22.192.77/s2b/api/v1/quiz/`,{
+            answers: answers,
+            id: id,
+        },{
             headers:{
                 Authorization: `Token ${localStorage.getItem('token')}`,
-            },
-            data: {
-                answers: answers,
-                id: id,
             },
         })
         console.log(data)

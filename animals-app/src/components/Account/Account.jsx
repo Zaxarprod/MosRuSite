@@ -38,7 +38,7 @@ class AccountContainer extends React.Component{
         this.props.SetCartTC(this.state.id)
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if(prevProps.acc !== this.props.acc){
+        if(prevProps.acc !== this.state.acc){
             this.props.SetCartTC(this.state.id)
         }
     }

@@ -1,5 +1,6 @@
 import axios from "axios"
 import {SetCurrentPageAC} from "./app-reducer";
+import {SetQuestionsTC} from "./auth-reducer";
 
 export const SET_CART = 'ACCOUNT/SET_CART'
 
@@ -25,17 +26,18 @@ const SetCartAC = (cart) => ({
     cart,
 })
 
-export const SetCartTC = (id) => {
+export const SetCartTC = (cart) => {
     return async (dispatch) => {
-        let data = await axios.get(`http://165.22.192.77/s2b/api/v1/animal/${id}/`).then(
+        let data = await axios.get(`http://165.22.192.77/s2b/api/v1/animal/${cart}/`).then(
             res=>{
                 dispatch(SetCartAC(res.data.data))
                 return res.data.data
             }
         )
+        dispatch(SetQuestionsTC())
         dispatch(SetCurrentPageAC({
-            id: data.animal_id,
-            name: data.animal_name,
+            id: data.animal_accounting_card,
+            name: data.name,
         }))
     }
 }

@@ -45,7 +45,7 @@ const Page = ({id, acc}) => {
                         <Slider acc={acc}/>
                     </div>
                     <div className={style.info}>
-                        <h2 className={style.name}>{acc.animal_name}, {acc.age}</h2>
+                        <h2 className={style.name}>{acc.name}, {acc.birth_date}</h2>
                         {Object.keys(acc).map(el => {
                             return (<p>{el}: {acc[el]}</p>)
                         })}

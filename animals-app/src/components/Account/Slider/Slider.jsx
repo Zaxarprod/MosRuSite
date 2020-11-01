@@ -29,7 +29,7 @@ export const Slider = ({acc}) => {
             }}
         >
                     <div className={style.item}>
-                        <img src={acc.animal_photo?URL + acc.animal_photo:'https://im0-tub-ru.yandex.net/i?id=f406483937e799b3c2ce106422fa6774&n=13'} />
+                        <img src={URL + `media/photos/${acc.animal_accounting_card}.jpg` || 'https://im0-tub-ru.yandex.net/i?id=f406483937e799b3c2ce106422fa6774&n=13'} />
                     </div>
 
         </OwlCarousel>

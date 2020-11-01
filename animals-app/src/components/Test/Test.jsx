@@ -4,11 +4,12 @@ import {CloseOutlined} from '@ant-design/icons'
 import {useDispatch} from "react-redux";
 import {SetIsTestAC} from "../../redux/app-reducer";
 import {connect} from "react-redux";
-import {SetAnswersTC} from "../../redux/auth-reducer";
-import {getToken, getUser} from "../../redux/auth-selector";
+import {SetAnswersTC, SetQuestionsTC} from "../../redux/auth-reducer";
+import {getQuestions, getToken, getUser} from "../../redux/auth-selector";
 import {getCart} from "../../redux/account-selector";
 
 class Test extends React.Component{
+
     constructor(props) {
         super(props)
         this.state = {
@@ -17,24 +18,7 @@ class Test extends React.Component{
             current: 0,
             selected: null,
             answers: [],
-            questions: [
-                {
-                    name: 'Q1',
-                    asks: ['a1','a2','a3'],
-                },
-                {
-                    name: 'Q2',
-                    asks: ['a1','a2','a3'],
-                },
-                {
-                    name: 'Q3',
-                    asks: ['a1','a2','a3'],
-                },
-                {
-                    name: 'Q4',
-                    asks: ['a1','a2','a3'],
-                },
-            ],
+            questions: this.props.questions,
 
         }
     }
@@ -96,12 +80,12 @@ class Test extends React.Component{
                     {
                         this.state.isStart && !this.state.isFinish &&
                         (
-                            <div className={style.questionBlock}>
+                            this.state.questions[this.state.current] && <div className={style.questionBlock}>
                                 <h3><b>ВОПРОС {this.state.current + 1}</b></h3>
                                 <p>
-                                    {this.state.questions[this.state.current].name}
+                                    {Object.keys(this.state.questions[this.state.current])[0]}
                                 </p>
-                                {this.state.questions[this.state.current].asks.map((el,i)=>{
+                                {this.state.questions[this.state.current][Object.keys(this.state.questions[this.state.current])[0]].map((el,i)=>{
                                     return (
                                         <p style={{marginBottom: '20px'}} className={style.ask} onClick={
                                             ()=>{
@@ -141,6 +125,7 @@ class Test extends React.Component{
 
 let mapStateToProps = (state) => ({
     id: getCart(state).animal_id,
-    token: getToken(state)
+    token: getToken(state),
+    questions: getQuestions(state),
 })
-export default connect(mapStateToProps,{SetIsTestAC, SetAnswersTC})(Test)
+export default connect(mapStateToProps,{SetIsTestAC, SetAnswersTC, SetQuestionsTC})(Test)
