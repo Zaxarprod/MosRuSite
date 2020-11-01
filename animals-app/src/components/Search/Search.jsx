@@ -133,12 +133,13 @@ class Search extends React.Component {
                         <div className={style.animals}>
                             {
                                 this.state.animals.map(el => {
+                                    console.log(el)
                                     return (
                                         <div>
-                                            <NavLink to={`/search/account/${el.animal_id}`}>
+                                            <NavLink to={`/search/account/${el.animal_accounting_card}`}>
                                                 <Cart name={el.animal_name}
-                                                      img={URL + el.animal_photo}
-                                                      description={`${el.animal_sex==='f'?'Девочка':'Мальчик'} / ${el.age}`}/>
+                                                      img={URL + `media/photos/${el.animal_accounting_card}}.jpg`}
+                                                      description={`${el.sex==='f'?'Девочка':'Мальчиfdк'} / ${el.birth_date}`}/>
                                             </NavLink>
                                         </div>
                                     )
