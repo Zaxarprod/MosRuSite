@@ -1,0 +1,185 @@
+.contentHome {
+  min-height: calc(100vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    .header{
+      font-family: Futura;
+      font-size: 37px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #000000;
+      margin-bottom: 30px;
+    }
+    .buttonBlock{
+      display: flex;
+      >div{
+        width: 50%;
+      }
+      >div:last-child{
+        padding-left: 20px;
+      }
+      .button{
+        a{
+          text-decoration: none;
+          color: white;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+        width: 186px;
+        height: 66px;
+        border-radius: 50px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background-color: #2723d8;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Futura;
+        font-size: 25px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        transition: all 0.5s ease-out;
+        &:hover{
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+      }
+    }
+    .block2{
+      margin-top: 50px;
+      display: flex;
+      padding-bottom: 130px;
+      div{
+        width: 50%;
+        display: flex;
+      }
+      .photoBlock{
+        justify-content: space-between;
+        div{
+          display: flex;
+          flex-direction: column;
+          width: calc(100%/3.1);
+          img{
+            width: 100%;
+          }
+          p{
+            font-family: Futura;
+            font-size: 15px;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            margin:0;
+            margin-top: 10px;
+          }
+        }
+      }
+      >div:last-child{
+        padding-left: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        div{
+          width: 49%;
+          max-height: 100px;
+          //background-color: black;
+          display: flex;
+          flex-direction: column;
+          border-left: 1px solid rgba(39, 35, 216, 0.74);
+          padding-left: 28px;
+          p{
+            font-family: Futura;
+            font-size: 15px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #c4c4c4;
+            margin:0;
+          }
+          .statisticsNumber{
+            color: black;
+            font-size: 24px;
+            margin-bottom: 23px;
+          }
+        }
+
+      }
+    }
+    .block1{
+      display: flex;
+      div{
+        width: 50%;
+        display: flex;
+      }
+      .photoBlock{
+        justify-content: space-between;
+        div{
+          display: flex;
+          flex-direction: column;
+          width: calc(100%/3.1);
+          img{
+            width: 100%;
+          }
+          p{
+            font-family: Futura;
+            font-size: 15px;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            margin:0;
+            margin-top: 10px;
+          }
+        }
+      }
+      >div:last-child{
+        padding-left: 20px;
+        flex-direction: column;
+        .animalsHeader{
+          font-family: Futura;
+          font-size: 15px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #eb2d28;
+          margin-bottom: 30px;
+        }
+        .text{
+          font-family: Futura;
+          font-size: 20px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #000000;
+        }
+
+      }
+    }
+  }
+}

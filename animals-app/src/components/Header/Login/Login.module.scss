@@ -1,0 +1,246 @@
+.wrapper{
+  //padding-right: 12vw;
+  display: flex;
+  justify-content: flex-end;
+  >div{
+    width: 118px;
+    height: 46px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .userBlock{
+    background-color: #2723d8;
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .list{
+    min-width: 150px;
+    position: absolute;
+    top: 60px;
+    right:0;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+    background-color:  #2723d8;
+    height:0;
+    div{
+      transition: all 0.5s ease-out;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      color: white;
+      font-family: Futura;
+      font-size: 15px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      &:hover{
+        cursor: pointer;
+        background-color: #4e4bec;
+      }
+    }
+  }
+  .openList{
+    height: auto;
+    transition: all 0.5s ease-out;
+    div{
+      width:100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      opacity: 1;
+    }
+  }
+  .closeList{
+    height: 0;
+    div {
+      transition: all 0.5s ease-out;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+  }
+  .reg{
+    font-family: Futura;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #bcbbbb;
+    transition: all 0.5s ease-out;
+    &:hover{
+      cursor: pointer;
+      color: darken(#bcbbbb, 20)
+    }
+    a{
+      text-decoration: none;
+      color: #bcbbbb;
+      transition: all 0.5s ease-out;
+      &:hover{
+        cursor: pointer;
+        color: darken(#bcbbbb, 20)
+      }
+    }
+  }
+  .formBlock{
+    width: 250px;
+    height: 192px;
+    background-color: #4700db;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 100000;
+    transition: all 0.5s ease-out;
+    .form{
+      padding-bottom: 12px;
+      padding-top: 12px;
+      display: flex;
+      height: 192px;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      a{
+        font-family: Futura;
+        font-size: 12px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(188, 187, 187, 0.68);
+      }
+      div{
+        display: flex;
+        justify-content: space-between!important;
+        width: 100%;
+        margin-top: - 20px;
+        padding-bottom: 13px;
+        a{
+          text-decoration: none;
+          height: 32px;
+          line-height: 32px;
+          font-family: Futura;
+          font-size: 14px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #bcbbbb;
+        }
+      }
+    }
+    h3{
+      font-family: Futura;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    input{
+      padding-left: 16px;
+      margin-bottom: 10px;
+      width: 184px;
+      height: 24px;
+      background-color: #ffffff;
+      border: none;
+      font-size: 12px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #bcbbbb!important;
+    }
+    button{
+      border: none;
+      width: 72px;
+      height: 32px;
+      border-radius: 20px;
+      background-color: #ffffff;
+      font-family: Futura;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #2723d8;;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-out;
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+    }
+    .cancel{
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      transition: all 0.5s ease-out;
+      svg{
+        color: white;
+        font-size: 17px
+      }
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+    }
+  }
+  .login{
+    font-family: Futura;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: white;
+    background-color: #2723d8;
+    transition: all 0.5s ease-out;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+    div{
+      text-decoration: none;
+      color: white;
+      transition: all 0.5s ease-out;
+      width: 100%;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}

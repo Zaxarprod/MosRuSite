@@ -1,0 +1,123 @@
+.dark{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000000;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .cancel{
+    position: absolute;
+    top: 34px;
+    right: 9%;
+    z-index: 10000000000;
+    &:hover{
+      cursor: pointer;
+    }
+    svg{
+      font-size: 16px;
+      color: black;
+    }
+  }
+  .testBlock{
+    position: relative;
+    width: 65vw;
+    height: 418px;
+    border-radius: 50px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      h3{
+        font-family: Futura;
+        font-size: 24px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 40px;
+      }
+      p{
+        font-family: Futura;
+        font-size: 18px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 40px;
+      }
+      .button{
+        margin: auto;
+        width: 183px;
+        height: 39px;
+        border-radius: 30px;
+        background-color: #2723d8;
+        font-family: Futura;
+        font-size: 14px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease-out;
+        &:hover{
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+        margin-bottom: 12px;
+      }
+    .bottomText{
+      position: absolute;
+      bottom: 30px;
+      left:0;
+      width: 100%;
+      margin:0;
+      font-family: Futura;
+      font-size: 12px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      text-align: center;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: rgba(188, 187, 187, 0.81);
+    }
+    .ask{
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .nextBlock{
+      position: absolute;
+      bottom: 30px;
+      right: calc(9% + 8px);
+      font-family: Futura;
+      font-size: 12px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000000;
+      z-index: 1000000000;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}

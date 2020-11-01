@@ -1,0 +1,35 @@
+.nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  div{
+    width: calc(100%/3);
+    text-align: center;
+    transition: all 0.5s linear;
+    height: 134px;
+    a{
+      font-family: Futura;
+      line-height: 134px;
+      height: 134px;
+      display: block;
+      text-decoration: none;
+      color: black;
+      transition: all 0.5s linear;
+      font-size: 16px;
+      &:hover{
+        cursor: pointer;
+        color: #2723d8;
+
+      }
+    }
+    .active{
+      font-weight: bold;
+      &:hover{
+        cursor: pointer;
+        color: black;
+
+      }
+    }
+
+  }
+}

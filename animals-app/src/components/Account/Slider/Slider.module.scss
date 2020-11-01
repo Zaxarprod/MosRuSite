@@ -1,0 +1,33 @@
+.owl-theme{
+  height: auto;
+}
+.item{
+  height: 31vw;
+  width: 27vw;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  img{
+    height: 31vw;
+  }
+}
+
+.dot{
+  border: none;
+  background-color: white;
+}
+.dot span{
+  width: 15px;
+  height: 15px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 50%;
+}
+.dot:focus{
+  border: none;
+  outline: none;
+}
+.dot.active span{
+  background: #2f54eb!important;
+}

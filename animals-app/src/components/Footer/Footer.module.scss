@@ -1,0 +1,90 @@
+.sn{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  svg{
+    font-size: 25.4px;
+    margin-right: 12px;
+  }
+}
+
+.footer{
+  height: 351px;
+  background-color: #2723d8;
+  position: relative;
+  .wrapper2{
+    position: absolute;
+    bottom:0;
+    padding-bottom: 40px;
+    width: 100%;
+    display: flex;
+    div {
+      font-family: Futura;
+      font-size: 14px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #ffffff;
+      width: 73%;
+    }
+    div:last-child{
+      width: 27%;
+      text-decoration: underline;
+    }
+  }
+  .wrapper1{
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    >div{
+      width: 30%;
+      .header{
+        font-family: Futura;
+        font-size: 16px;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+      }
+      div{
+        font-family: Futura;
+        font-size: 16px;
+        font-weight: 100;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        margin-top: 20px;
+      }
+      div:last-child{
+        margin-top: 12px;
+      }
+    }
+    >div:last-child{
+      width: 18%
+    }
+    >div:nth-child(4){
+      width: 22%
+    }
+    .brand{
+      a{
+        display: block;
+        text-decoration: none;
+      }
+      object{
+        pointer-events: none;
+      }
+      .logo{
+        width: 92px;
+      }
+    }
+  }
+}

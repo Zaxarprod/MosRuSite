@@ -1,0 +1,27 @@
+.cart{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .image{
+    height: 21vw;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    img{
+      height: 21vw;
+    }
+  }
+  p{
+    font-family: Futura;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    margin:0;
+    margin-top: 10px;
+    margin-left: 3%;
+  }
+}
